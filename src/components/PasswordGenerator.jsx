@@ -23,6 +23,7 @@ const PasswordGenerator = () => {
   }, [length, addNumbers, addSpecialChar, setPassword, PasswordGenerate]);
   const CopyToClipBoard = () => {
     window.navigator.clipboard.writeText(Password);
+    Passwordref.current?.select();
     setCopy(true);
     setTimeout(() => setCopy(false), 1000);
   };
